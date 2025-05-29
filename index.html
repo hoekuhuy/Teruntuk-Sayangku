@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy 1 Month Sayang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  </head>
+  <body>
+    <!-- ===== TOP RIGHT BUTTONS ===== -->
+    <div id="topBar">
+      <button id="musicToggle" onclick="toggleMusic()">🔈</button>
+      <button id="seeMsgBtn" onclick="seeMessage()" class="circle-button">💌</button>
+      
+    </div>
+
+    <div id="app">
+      <!-- LOGIN -->
+      <div id="login" class="animate__animated animate__fadeIn">
+        <h2>Passwordnya Tanggal Jadi Kita Yah Sayang! :</h2>
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="checkPassword()">Login</button>
+      </div>
+
+      <!-- KUIS -->
+      <div id="quiz" class="hidden animate__animated animate__fadeIn">
+        <h2>Hayolohh Mas Tau Nda Jawabannya😊</h2>
+        <div id="questions"></div>
+        <button onclick="submitQuiz()">Submit</button>
+      </div>
+
+      <!-- UCAPAN -->
+      <div id="messagePage" class="hidden animate__animated animate__fadeIn">
+        <h1>🎉Happy 1 Month With You🎉</h1>
+        <p id="longMessage"></p>
+        <div id="buttonWrapper" style="position: relative; height: 200px; margin-top: 30px;">
+          <button id="giftMoveButton" onclick="handleGiftMove()">Hadiah Buat Kesayanganku 🎁</button>
+        </div>
+      </div>
+
+      <!-- FOTO -->
+      <div id="photoPage" class="hidden animate__animated animate__fadeIn">
+        <h2>💖Buat Mas, Yang Selalu Ada Dihati Adek💖</h2>
+        <img src="your-photo.jpg" alt="Our Photo" />
+        <img src="your-photo2.jpg" alt="Our Photo" />
+        <img src="your-photo3.jpg" alt="Our Photo" />
+         <video controls>
+    <source src="video.mp4" type="video/mp4">
+    Browser kamu tidak mendukung video.
+  </video>
+        <button onclick="goToWriteMessage()">Ada Pesan Buat Adek? 💖</button>
+      </div>
+
+      <!-- PESAN -->
+      <div id="writeMessagePage" class="hidden animate__animated animate__fadeIn">
+        <h2>Tulis pesan buat adek ya, sayang 🥺❤️</h2>
+        <textarea id="herMessage" placeholder="Tulis di sini..." rows="6" cols="40"></textarea>
+        <br />
+        <button onclick="saveMessage()">Kirim 💌</button>
+  
+      </div>
+
+      <!-- HALAMAN AKHIR -->
+      <div id="endingPage" class="hidden animate__animated animate__fadeIn">
+        <div id="loveMessage" style="font-size: 24px; font-family: 'Pacifico', cursive; text-align: center; margin-top: 30px; color: #ff4d6d;"></div>
+      </div>
+
+      <!-- Musik -->
+      <audio id="bgMusic" loop>
+        <source src="lagu.mp3" type="audio/mp3" />
+        Browsermu tidak mendukung audio.
+      </audio>
+
+      <!-- Hati Jatuh -->
+      <div id="heart-container"></div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
